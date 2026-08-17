@@ -16,6 +16,26 @@ DSH 精选插件中心：在设置页里浏览、搜索、安装、验证并更�
 - **启用 / 禁用**：写入 profile 状态文件，下次宿主启动生效（中心不做热卸载）。
 - **更新检测**：npm 包用 semver 比较，GitHub 安装用 commit SHA 对比，30 分钟 TTL 缓存。
 
+## 安装
+
+```bash
+dsh plugin --profile web add dsh-featured-plugins
+```
+
+> `web` 是 profile 名，请替换为你实际的 profile 名称。若你的 DSH home 目录不是默认的 `~/.dsh`，请显式带上 `DSH_HOME`，例如 `DSH_HOME=/Users/mac/.deepseek-work dsh plugin --profile web add dsh-featured-plugins`。
+>
+> 安装完成后需**重启宿主进程**（`client-modules` 的插件缓存不会自动失效）。
+
+### 通过 GitHub 仓库安装
+
+也可以不经过 npm，直接从 GitHub 仓库安装，target 格式为 `github:owner/repo`：
+
+```bash
+dsh plugin --profile web add github:peter123023/dsh-featured-plugins
+```
+
+精选目录里的每个条目在服务端预先算好了安装目标（npm 包名优先、GitHub tarball 兜底），客户端只传 registry 条目 URL、不传任意 target，所以以上命令仅用于手动安装；通过中心 UI 安装时会自动解析正确的 target。
+
 ## 架构
 
 ```
@@ -51,26 +71,6 @@ pnpm test
 ```
 
 宿主环境要求 `@deepseek-ai/cordis ^4.0.1`（peerDependency）。
-
-## 安装
-
-```bash
-dsh plugin --profile web add dsh-featured-plugins
-```
-
-> `web` 是 profile 名，请替换为你实际的 profile 名称。若你的 DSH home 目录不是默认的 `~/.dsh`，请显式带上 `DSH_HOME`，例如 `DSH_HOME=/Users/mac/.deepseek-work dsh plugin --profile web add dsh-featured-plugins`。
->
-> 安装完成后需**重启宿主进程**（`client-modules` 的插件缓存不会自动失效）。
-
-### 通过 GitHub 仓库安装
-
-也可以不经过 npm，直接从 GitHub 仓库安装，target 格式为 `github:owner/repo`：
-
-```bash
-dsh plugin --profile web add github:peter123023/dsh-featured-plugins
-```
-
-精选目录里的每个条目在服务端预先算好了安装目标（npm 包名优先、GitHub tarball 兜底），客户端只传 registry 条目 URL、不传任意 target，所以以上命令仅用于手动安装；通过中心 UI 安装时会自动解析正确的 target。
 
 ### 本地验证
 

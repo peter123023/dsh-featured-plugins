@@ -16,6 +16,26 @@ A DSH featured-plugin marketplace: browse, search, install, verify, and update c
 - **Enable / disable**: persisted to the profile state file and applied on the next host boot (the market does not hot-unmount).
 - **Update detection**: semver comparison for npm packages, commit-SHA comparison for GitHub installs, with a 30-minute TTL cache.
 
+## Installation
+
+```bash
+dsh plugin --profile web add dsh-featured-plugins
+```
+
+> `web` is the profile name — replace it with your actual profile. If your DSH home directory is not the default `~/.dsh`, pass `DSH_HOME` explicitly, e.g. `DSH_HOME=/Users/mac/.deepseek-work dsh plugin --profile web add dsh-featured-plugins`.
+>
+> Restart the host process after installing (the `client-modules` plugin cache does not auto-invalidate).
+
+### Installing from a GitHub repository
+
+You can also install directly from a GitHub repository without going through npm. The target format is `github:owner/repo`:
+
+```bash
+dsh plugin --profile web add github:peter123023/dsh-featured-plugins
+```
+
+Each curated entry pre-computes its install target server-side (npm name first, GitHub tarball as fallback); the client only sends a registry entry `url` and never an arbitrary target. The commands above are for manual installation only — installing via the market UI resolves the correct target automatically.
+
 ## Architecture
 
 ```
@@ -51,26 +71,6 @@ pnpm test
 ```
 
 The host environment requires `@deepseek-ai/cordis ^4.0.1` (peerDependency).
-
-## Installation
-
-```bash
-dsh plugin --profile web add dsh-featured-plugins
-```
-
-> `web` is the profile name — replace it with your actual profile. If your DSH home directory is not the default `~/.dsh`, pass `DSH_HOME` explicitly, e.g. `DSH_HOME=/Users/mac/.deepseek-work dsh plugin --profile web add dsh-featured-plugins`.
->
-> Restart the host process after installing (the `client-modules` plugin cache does not auto-invalidate).
-
-### Installing from a GitHub repository
-
-You can also install directly from a GitHub repository without going through npm. The target format is `github:owner/repo`:
-
-```bash
-dsh plugin --profile web add github:peter123023/dsh-featured-plugins
-```
-
-Each curated entry pre-computes its install target server-side (npm name first, GitHub tarball as fallback); the client only sends a registry entry `url` and never an arbitrary target. The commands above are for manual installation only — installing via the market UI resolves the correct target automatically.
 
 ### Local verification
 
