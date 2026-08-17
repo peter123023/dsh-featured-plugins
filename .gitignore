@@ -1,0 +1,7 @@
+node_modules/
+lib/
+client/
+*.tsbuildinfo
+*.tgz
+coverage/
+.DS_Store

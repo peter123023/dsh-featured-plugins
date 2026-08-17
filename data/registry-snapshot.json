@@ -1,0 +1,822 @@
+{
+  "updated": "2026-08-16",
+  "count": 50,
+  "categories": {
+    "ui": {
+      "en": "UI Enhancements",
+      "zh": "UI 增强"
+    },
+    "usage": {
+      "en": "Usage & Billing",
+      "zh": "用量与计费"
+    },
+    "theme": {
+      "en": "Themes & Appearance",
+      "zh": "主题与外观"
+    },
+    "model": {
+      "en": "Models & Providers",
+      "zh": "模型与账号接入"
+    },
+    "session": {
+      "en": "Sessions & Messages",
+      "zh": "会话与消息"
+    },
+    "memory": {
+      "en": "Memory",
+      "zh": "记忆"
+    },
+    "tools": {
+      "en": "Tools & Capabilities",
+      "zh": "工具与能力"
+    },
+    "vision": {
+      "en": "Vision & Multimodal",
+      "zh": "视觉与多模态"
+    },
+    "skill": {
+      "en": "Skills",
+      "zh": "技能包"
+    },
+    "workflow": {
+      "en": "Workflow & Automation",
+      "zh": "工作流与自动化"
+    },
+    "notify": {
+      "en": "Notifications & Integrations",
+      "zh": "通知与集成"
+    },
+    "dev": {
+      "en": "Development & Runtime",
+      "zh": "开发与运行时"
+    },
+    "market": {
+      "en": "Plugin Markets & Managers",
+      "zh": "插件市场与管理"
+    },
+    "fun": {
+      "en": "Just for Fun",
+      "zh": "娱乐"
+    }
+  },
+  "plugins": [
+    {
+      "name": "OpenViking#examples/dsh-memory-plugin",
+      "owner": "volcengine",
+      "url": "https://github.com/volcengine/OpenViking/tree/main/examples/dsh-memory-plugin",
+      "page": "https://awesome-dsh-plugin.com/p/volcengine/OpenViking--examples-dsh-memory-plugin/",
+      "category": "memory",
+      "description": {
+        "en": "OpenViking memory and context bundle for DeepSeek Harness: pre-step auto-recall and profile injection, session capture, `viking://` URI guarding, and recall/write memory tools backed by an OpenViking server.",
+        "zh": "面向 DeepSeek Harness 的 OpenViking 记忆与上下文插件：pre-step 自动召回与画像注入、会话捕获、`viking://` URI 防护，以及对接 OpenViking 服务端的 recall/write 记忆工具。"
+      },
+      "npm": null,
+      "stars": 28649,
+      "install": "github:volcengine/OpenViking#path:/examples/dsh-memory-plugin",
+      "added": "2026-08-16"
+    },
+    {
+      "name": "mirage#dsh",
+      "owner": "strukto-ai",
+      "url": "https://github.com/strukto-ai/mirage/tree/main/typescript/packages/dsh",
+      "page": "https://awesome-dsh-plugin.com/p/strukto-ai/mirage--typescript-packages-dsh/",
+      "category": "dev",
+      "description": {
+        "en": "Swaps the filesystem and bash providers for a mirage virtual workspace: file tools and shell commands run over mounted resources (RAM, S3, Redis, Slack, Gmail, Notion, Postgres) instead of the host disk, with per-mount read/write/exec modes, per-command sandbox routing (monty, pyodide, quickjs in process; docker, e2b, daytona remote), and installed CLIs (git, gh, slack, linear, ntn, gws, or one you register) as head words in the virtual terminal.",
+        "zh": "把文件系统与 bash 提供者换成 mirage 虚拟工作区：文件工具与 shell 命令作用于挂载的资源（RAM、S3、Redis、Slack、Gmail、Notion、Postgres）而非宿主磁盘，支持按挂载点设置读/写/执行模式、按命令选择沙箱（进程内 monty、pyodide、quickjs；远程 docker、e2b、daytona），并可在虚拟终端中安装 CLI（git、gh、slack、linear、ntn、gws，或自行注册的程序树）作为命令头词。"
+      },
+      "npm": "@struktoai/mirage-dsh",
+      "stars": 3467,
+      "install": "@struktoai/mirage-dsh",
+      "added": "2026-08-15"
+    },
+    {
+      "name": "dsh-web-ui#packages/dsh-web-ui-all",
+      "owner": "zhu1090093659",
+      "url": "https://github.com/zhu1090093659/dsh-web-ui/tree/main/packages/dsh-web-ui-all",
+      "page": "https://awesome-dsh-plugin.com/p/zhu1090093659/dsh-web-ui--packages-dsh-web-ui-all/",
+      "category": "ui",
+      "description": {
+        "en": "Plugin and skin collection for the DSH Web UI: task board, Git graph, right-side panel, remote mobile UI, pet, live token stats, and a skin center.",
+        "zh": "DSH Web UI 插件与皮肤合集：任务看板、git 图、右侧面板、远程移动端 UI、桌宠、实时 token 统计与皮肤中心。"
+      },
+      "npm": "@linxin666/dsh-web-ui-all",
+      "stars": 3362,
+      "install": "@linxin666/dsh-web-ui-all",
+      "added": "2026-08-14"
+    },
+    {
+      "name": "modlens",
+      "owner": "liustack",
+      "url": "https://github.com/liustack/modlens",
+      "page": "https://awesome-dsh-plugin.com/p/liustack/modlens/",
+      "category": "vision",
+      "description": {
+        "en": "Vision bridge for text-only models: paste an image, get structured JSON evidence (OCR, layout, semantics).",
+        "zh": "为纯文本模型架起视觉桥梁：粘贴图片，输出结构化 JSON 证据（OCR、版面、语义）。"
+      },
+      "npm": "@liustack/modlens",
+      "stars": 2338,
+      "install": "@liustack/modlens",
+      "added": "2026-08-14"
+    },
+    {
+      "name": "dsh-deep-whale#maid-atelier",
+      "owner": "Small-tailqwq",
+      "url": "https://github.com/Small-tailqwq/dsh-deep-whale/tree/main/maid-atelier",
+      "page": "https://awesome-dsh-plugin.com/p/Small-tailqwq/dsh-deep-whale--maid-atelier/",
+      "category": "theme",
+      "description": {
+        "en": "Whale-girl skin series for the DSH Web UI (maid-atelier).",
+        "zh": "DSH Web 鲸鱼娘皮肤系列（深海女仆工坊 maid-atelier）。"
+      },
+      "npm": null,
+      "stars": 1076,
+      "install": "github:Small-tailqwq/dsh-deep-whale#path:/maid-atelier",
+      "added": "2026-08-16"
+    },
+    {
+      "name": "Aegis",
+      "owner": "GanyuanRan",
+      "url": "https://github.com/GanyuanRan/Aegis",
+      "page": "https://awesome-dsh-plugin.com/p/GanyuanRan/Aegis/",
+      "category": "skill",
+      "description": {
+        "en": "Software-engineering method pack for coding agents, with skills for baseline-first planning, systematic debugging, prompt hygiene, verification before completion, and repair/retirement tracking.",
+        "zh": "面向编码 Agent 的软件工程方法包，提供基线优先规划、系统化调试、提示词卫生、完成前验证，以及修复/退役双轨跟踪技能。"
+      },
+      "npm": null,
+      "stars": 1024,
+      "install": "github:GanyuanRan/Aegis",
+      "added": "2026-08-15"
+    },
+    {
+      "name": "dsh-ads",
+      "owner": "Nagi-ovo",
+      "url": "https://github.com/Nagi-ovo/dsh-ads",
+      "page": "https://awesome-dsh-plugin.com/p/Nagi-ovo/dsh-ads/",
+      "category": "fun",
+      "description": {
+        "en": "Parody ads in 2005-Chinese-web style: sidebar banners, in-chat feeds, corner popups, and a close button whose hit area is smaller than it looks. All fictional.",
+        "zh": "2005 年中文站点风格的整活广告插件：侧栏广告/信息流/角落弹窗 + 假关闭叉，素材全虚构。"
+      },
+      "npm": null,
+      "stars": 455,
+      "install": "github:Nagi-ovo/dsh-ads",
+      "added": "2026-08-13"
+    },
+    {
+      "name": "treg",
+      "owner": "superdesigndev",
+      "url": "https://github.com/superdesigndev/treg",
+      "page": "https://awesome-dsh-plugin.com/p/superdesigndev/treg/",
+      "category": "tools",
+      "description": {
+        "en": "Tool catalog for agents: search ~2,600 external endpoints (SEO and SERP, backlinks, social, people and company enrichment, ad libraries, scraping) by the task you want done, read each one's parameters and per-call price, then call it with the credential injected server-side. Ships the skill plus an MCP row that stays disabled until TREG_TOKEN is set.",
+        "zh": "给 Agent 的工具目录：按「要做的事」检索约 2,600 个外部接口（SEO 与 SERP、外链、社交、人物与公司信息补全、广告库、抓取），查看参数与单次调用价格后直接调用，凭据由服务端注入。附带技能，MCP 行在未设置 TREG_TOKEN 前保持禁用。"
+      },
+      "npm": null,
+      "stars": 425,
+      "install": "github:superdesigndev/treg",
+      "added": "2026-08-15"
+    },
+    {
+      "name": "dsh-agent-teams",
+      "owner": "NanmiCoder",
+      "url": "https://github.com/NanmiCoder/dsh-agent-teams",
+      "page": "https://awesome-dsh-plugin.com/p/NanmiCoder/dsh-agent-teams/",
+      "category": "workflow",
+      "description": {
+        "en": "AgentTeams multi-agent teams.",
+        "zh": "AgentTeams 多智能体团队。"
+      },
+      "npm": "@nanmicoder/dsh-agent-teams",
+      "stars": 411,
+      "install": "@nanmicoder/dsh-agent-teams",
+      "added": "2026-08-13"
+    },
+    {
+      "name": "dsh-turn-rewind",
+      "owner": "Anionex",
+      "url": "https://github.com/Anionex/dsh-turn-rewind",
+      "page": "https://awesome-dsh-plugin.com/p/Anionex/dsh-turn-rewind/",
+      "category": "session",
+      "description": {
+        "en": "Rewind conversation and workspace state, powered by a persistent Change Ledger.",
+        "zh": "对话回退：基于持久 Change Ledger 回滚会话与工作区状态。"
+      },
+      "npm": "@anionex/dsh-turn-rewind",
+      "stars": 64,
+      "install": "@anionex/dsh-turn-rewind",
+      "added": "2026-08-13"
+    },
+    {
+      "name": "dsh-notification",
+      "owner": "omdsh-dev",
+      "url": "https://github.com/omdsh-dev/dsh-notification",
+      "page": "https://awesome-dsh-plugin.com/p/omdsh-dev/dsh-notification/",
+      "category": "notify",
+      "description": {
+        "en": "Desktop notifications for turn completions, with per-outcome controls and keyword rules.",
+        "zh": "回合完成桌面通知，按结果分控 + 关键词过滤。"
+      },
+      "npm": null,
+      "stars": 53,
+      "install": "github:omdsh-dev/dsh-notification",
+      "added": "2026-08-13"
+    },
+    {
+      "name": "dsh-cost-meter",
+      "owner": "Han-1413141",
+      "url": "https://github.com/Han-1413141/dsh-cost-meter",
+      "page": "https://awesome-dsh-plugin.com/p/Han-1413141/dsh-cost-meter/",
+      "category": "usage",
+      "description": {
+        "en": "Per-session and daily API cost, budget with usage %, official balance, history dashboard, and one-click official price sync with peak/off-peak pricing.",
+        "zh": "会话与当日 API 费用统计、预算图框（已用%）、官方余额、历史看板，支持峰谷计价与官方价格一键同步。"
+      },
+      "npm": null,
+      "stars": 49,
+      "install": "github:Han-1413141/dsh-cost-meter",
+      "added": "2026-08-14"
+    },
+    {
+      "name": "dsh-commandcode-provider",
+      "owner": "Mars-Sea",
+      "url": "https://github.com/Mars-Sea/dsh-commandcode-provider",
+      "page": "https://awesome-dsh-plugin.com/p/Mars-Sea/dsh-commandcode-provider/",
+      "category": "model",
+      "description": {
+        "en": "Unofficial Command Code LLM provider: registers a `commandcode` route with a live model catalog and reasoning-effort support.",
+        "zh": "非官方 Command Code 模型接入插件：注册 `commandcode` 路由，带实时模型目录与推理强度支持。"
+      },
+      "npm": "@mars-sea/dsh-commandcode-provider",
+      "stars": 34,
+      "install": "@mars-sea/dsh-commandcode-provider",
+      "added": "2026-08-15",
+      "screenshots": [
+        "https://raw.githubusercontent.com/Mars-Sea/dsh-commandcode-provider/main/assets/screenshots/model-picker.png",
+        "https://raw.githubusercontent.com/Mars-Sea/dsh-commandcode-provider/main/assets/screenshots/usage-dashboard.png"
+      ]
+    },
+    {
+      "name": "hindsight#coding-agents",
+      "owner": "vectorize-io",
+      "url": "https://github.com/vectorize-io/hindsight/tree/main/hindsight-integrations/coding-agents",
+      "page": "https://awesome-dsh-plugin.com/p/vectorize-io/hindsight--hindsight-integrations-coding-agents/",
+      "category": "memory",
+      "description": {
+        "en": "Hindsight, agent memory that learns: long-term project memory with auto recall and retain, knowledge pages, deep reflection, and per-repo memory banks.",
+        "zh": "Hindsight：会学习的 Agent 长期记忆系统，自动召回/保存、知识页、深度反思与按仓库隔离的记忆银行。"
+      },
+      "npm": "@vectorize-io/hindsight-coding-agents",
+      "stars": 20034,
+      "install": "@vectorize-io/hindsight-coding-agents",
+      "added": "2026-08-15"
+    },
+    {
+      "name": "oh-dsh",
+      "owner": "hust-open-atom-club",
+      "url": "https://github.com/hust-open-atom-club/oh-dsh",
+      "page": "https://awesome-dsh-plugin.com/p/hust-open-atom-club/oh-dsh/",
+      "category": "dev",
+      "description": {
+        "en": "Community distribution: TUI, desktop, and Web UI as one bundle with layered installation.",
+        "zh": "社区发行版：TUI、桌面端与 Web UI 统一体验，分层安装、一步到位。"
+      },
+      "npm": null,
+      "stars": 215,
+      "install": "github:hust-open-atom-club/oh-dsh",
+      "added": "2026-08-14"
+    },
+    {
+      "name": "DSH-better-sidebar",
+      "owner": "omdsh-dev",
+      "url": "https://github.com/omdsh-dev/DSH-better-sidebar",
+      "page": "https://awesome-dsh-plugin.com/p/omdsh-dev/DSH-better-sidebar/",
+      "category": "ui",
+      "description": {
+        "en": "Full sidebar workbench with file rendering and editing, terminal, Git, and subagents; third-party plugins can register new tabs.",
+        "zh": "侧边栏完整工作台：内置文件渲染编辑、终端、Git 与子代理，支持三方插件注册新 Tab。"
+      },
+      "npm": "dsh-better-sidebar",
+      "stars": 1600,
+      "install": "dsh-better-sidebar",
+      "added": "2026-08-14"
+    },
+    {
+      "name": "dsh-vision-toolkit",
+      "owner": "Anionex",
+      "url": "https://github.com/Anionex/dsh-vision-toolkit",
+      "page": "https://awesome-dsh-plugin.com/p/Anionex/dsh-vision-toolkit/",
+      "category": "vision",
+      "description": {
+        "en": "Vision tasks for text-only models: intent-aware image Q&A, long-screenshot OCR, UI reproduction, grounding, and pixel diff.",
+        "zh": "让纯文本模型更好地做视觉任务：带意图的图片问答、长截图 OCR、UI 还原等。"
+      },
+      "npm": "@anionex/dsh-vision-toolkit",
+      "stars": 510,
+      "install": "@anionex/dsh-vision-toolkit",
+      "added": "2026-08-13"
+    },
+    {
+      "name": "deep-whale-day-night-theme",
+      "owner": "GGBond2424648901",
+      "url": "https://github.com/GGBond2424648901/deep-whale-day-night-theme",
+      "page": "https://awesome-dsh-plugin.com/p/GGBond2424648901/deep-whale-day-night-theme/",
+      "category": "theme",
+      "description": {
+        "en": "Day/night whale-girl skin: a crystal workshop by day and a moon-tide observatory by night, with paired scenes, chibi companions, ornaments, and lightweight bubble and star ambience.",
+        "zh": "鲸鱼娘昼夜皮肤：白昼水晶工坊与夜晚月潮观测室双场景，成对角色、Q 版侧栏宠物、花边与气泡/星点轻量氛围。"
+      },
+      "npm": null,
+      "stars": 67,
+      "install": "github:GGBond2424648901/deep-whale-day-night-theme",
+      "added": "2026-08-16"
+    },
+    {
+      "name": "superdesign-skill",
+      "owner": "superdesigndev",
+      "url": "https://github.com/superdesigndev/superdesign-skill",
+      "page": "https://awesome-dsh-plugin.com/p/superdesigndev/superdesign-skill/",
+      "category": "skill",
+      "description": {
+        "en": "Design skill for UI and marketing graphics on the Superdesign canvas: reads the repo for context, extracts its design system, then generates and iterates branchable design drafts, flow pages, and reusable components through the Superdesign CLI.",
+        "zh": "在 Superdesign 画布上做 UI 与营销图的设计技能：先读代码库拿上下文、抽取现有设计系统，再通过 Superdesign CLI 生成并迭代可分支的设计稿、流程页与可复用组件。"
+      },
+      "npm": null,
+      "stars": 421,
+      "install": "github:superdesigndev/superdesign-skill",
+      "added": "2026-08-15"
+    },
+    {
+      "name": "DSH-Plugins-Marketplace",
+      "owner": "bradeGithub",
+      "url": "https://github.com/bradeGithub/DSH-Plugins-Marketplace",
+      "page": "https://awesome-dsh-plugin.com/p/bradeGithub/DSH-Plugins-Marketplace/",
+      "category": "market",
+      "description": {
+        "en": "GitHub-topic-driven plugin & skill marketplace: a Settings page that browses the auto-collected registry (the whole dsh-plugin topic plus the skills index, CI-refreshed every 2 hours) with one-click install, type detection, install-script and host-shadow-dependency safety confirmations, env-key management, and the STANDARD.md recognition spec.",
+        "zh": "面向 GitHub dsh-plugin 话题的插件与技能市场：设置页内逛自动收录的全量索引（CI 每 2 小时刷新），一键安装带类型识别、安装脚本与宿主依赖遮蔽安全检查、环境变量密钥管理，并附 STANDARD.md 识别层规范。"
+      },
+      "npm": null,
+      "stars": 87,
+      "install": "github:bradeGithub/DSH-Plugins-Marketplace",
+      "added": "2026-08-16"
+    },
+    {
+      "name": "whale-girl",
+      "owner": "vlln",
+      "url": "https://github.com/vlln/whale-girl",
+      "page": "https://awesome-dsh-plugin.com/p/vlln/whale-girl/",
+      "category": "fun",
+      "description": {
+        "en": "Desktop pet (QQ-pet style): floats in the corner, draggable, feedable, playable.",
+        "zh": "桌面宠物（QQ 宠物形态）：右下角悬浮、可拖拽/投喂/玩耍。"
+      },
+      "npm": null,
+      "stars": 194,
+      "install": "github:vlln/whale-girl",
+      "added": "2026-08-13"
+    },
+    {
+      "name": "dsh-browser",
+      "owner": "Lum1104",
+      "url": "https://github.com/Lum1104/dsh-browser",
+      "page": "https://awesome-dsh-plugin.com/p/Lum1104/dsh-browser/",
+      "category": "tools",
+      "description": {
+        "en": "Chrome sidebar extension that lets DSH operate your browser directly, no vision capabilities required.",
+        "zh": "Chrome 侧边栏扩展，让 DSH 直接操控你的浏览器，无需视觉能力。"
+      },
+      "npm": null,
+      "stars": 198,
+      "install": "github:Lum1104/dsh-browser",
+      "added": "2026-08-14"
+    },
+    {
+      "name": "dsh_workflow",
+      "owner": "icetomoyo",
+      "url": "https://github.com/icetomoyo/dsh_workflow",
+      "page": "https://awesome-dsh-plugin.com/p/icetomoyo/dsh_workflow/",
+      "category": "workflow",
+      "description": {
+        "en": "UltraCode-style multi-agent orchestration: a generatable, savable, governable, observable, resumable workflow layer.",
+        "zh": "把 UltraCode 式多 Agent 调度带给 DSH：可生成、可保存、可治理、可观察、可恢复的 Workflow 层。"
+      },
+      "npm": null,
+      "stars": 63,
+      "install": "github:icetomoyo/dsh_workflow",
+      "added": "2026-08-13"
+    },
+    {
+      "name": "dsh-chat-import",
+      "owner": "Nwflower",
+      "url": "https://github.com/Nwflower/dsh-chat-import",
+      "page": "https://awesome-dsh-plugin.com/p/Nwflower/dsh-chat-import/",
+      "category": "session",
+      "description": {
+        "en": "Import full-fidelity chat histories from 13 coding agents (Claude Code, Codex, ChatGPT, Cursor, Gemini, opencode, and more) as resumable DeepSeek Harness sessions, with reverse export back to Claude Code.",
+        "zh": "把 13 家 coding agent（Claude Code、Codex、ChatGPT、Cursor、Gemini、opencode 等）的完整对话历史导入为可续聊的 DeepSeek Harness 会话，并支持反向导出回 Claude Code。"
+      },
+      "npm": "dsh-chat-import",
+      "stars": 46,
+      "install": "dsh-chat-import",
+      "added": "2026-08-13"
+    },
+    {
+      "name": "dsh-open-in-vscode",
+      "owner": "omdsh-dev",
+      "url": "https://github.com/omdsh-dev/dsh-open-in-vscode",
+      "page": "https://awesome-dsh-plugin.com/p/omdsh-dev/dsh-open-in-vscode/",
+      "category": "notify",
+      "description": {
+        "en": "Open DSH workspace directories in VS Code directly from the web GUI.",
+        "zh": "从 Web GUI 一键在 VS Code 中打开工作区目录。"
+      },
+      "npm": null,
+      "stars": 45,
+      "install": "github:omdsh-dev/dsh-open-in-vscode",
+      "added": "2026-08-13"
+    },
+    {
+      "name": "dsh-usage-stats",
+      "owner": "Ychris12138",
+      "url": "https://github.com/Ychris12138/dsh-usage-stats",
+      "page": "https://awesome-dsh-plugin.com/p/Ychris12138/dsh-usage-stats/",
+      "category": "usage",
+      "description": {
+        "en": "Multi-provider usage dashboard with provider/model token breakdowns, calendar drill-downs, account balances, and OpenCode Go / Z.ai subscription quota tracking.",
+        "zh": "多供应商用量看板：按供应商/模型统计 Token 与日期下钻，统一展示账户余额，并追踪 OpenCode Go / Z.ai 订阅额度。"
+      },
+      "npm": null,
+      "stars": 49,
+      "install": "github:Ychris12138/dsh-usage-stats",
+      "added": "2026-08-15"
+    },
+    {
+      "name": "dsh-codex-connect",
+      "owner": "franksong2702",
+      "url": "https://github.com/franksong2702/dsh-codex-connect",
+      "page": "https://awesome-dsh-plugin.com/p/franksong2702/dsh-codex-connect/",
+      "category": "model",
+      "description": {
+        "en": "Connect ChatGPT OAuth and OpenAI Codex models to DeepSeek Harness, with opt-in search and image tools.",
+        "zh": "通过 ChatGPT OAuth 将 OpenAI Codex 模型接入 DeepSeek Harness，并提供可选的搜索与图片工具。"
+      },
+      "npm": "dsh-codex-connect",
+      "stars": 13,
+      "install": "dsh-codex-connect",
+      "added": "2026-08-14",
+      "screenshots": [
+        "https://raw.githubusercontent.com/franksong2702/dsh-codex-connect/main/docs/assets/en/plugin-entry.jpg",
+        "https://raw.githubusercontent.com/franksong2702/dsh-codex-connect/main/docs/assets/en/oauth-status.jpg",
+        "https://raw.githubusercontent.com/franksong2702/dsh-codex-connect/main/docs/assets/en/plugin-configuration.jpg",
+        "https://raw.githubusercontent.com/franksong2702/dsh-codex-connect/main/docs/assets/en/model-selector.jpg",
+        "https://raw.githubusercontent.com/franksong2702/dsh-codex-connect/main/docs/assets/zh/hero.jpg",
+        "https://raw.githubusercontent.com/franksong2702/dsh-codex-connect/main/docs/assets/zh/plugin-entry.jpg",
+        "https://raw.githubusercontent.com/franksong2702/dsh-codex-connect/main/docs/assets/zh/oauth-status.jpg",
+        "https://raw.githubusercontent.com/franksong2702/dsh-codex-connect/main/docs/assets/zh/plugin-configuration.jpg"
+      ]
+    },
+    {
+      "name": "dsh-engramory",
+      "owner": "tinqiao-oss",
+      "url": "https://github.com/tinqiao-oss/engramory/tree/master/adapters/dsh/plugin",
+      "page": "https://awesome-dsh-plugin.com/p/tinqiao-oss/engramory--adapters-dsh-plugin/",
+      "category": "memory",
+      "description": {
+        "en": "The Engramory curated-memory discipline as an installable plugin ([npm: dsh-engramory](https://www.npmjs.com/package/dsh-engramory)): a deterministic 200-line / 25 KB cap on the `MEMORY.md` index via `ctx.tools.guard()` — growth denied, a shrinking rewrite always passes — plus the protocol registered as a runtime skill. The store is plain markdown, one file per fact, shared with Claude Code, Codex, Kiro, and OpenClaw.",
+        "zh": "把 Engramory 策展式记忆纪律做成可安装插件（[npm: dsh-engramory](https://www.npmjs.com/package/dsh-engramory)）：通过 `ctx.tools.guard()` 对 `MEMORY.md` 索引施加确定性的 200 行 / 25KB 上限（增长即拒、缩小的重写一律放行），并把协议注册为运行时 skill。记忆库是纯 markdown、一条事实一个文件，与 Claude Code、Codex、Kiro、OpenClaw 共用。"
+      },
+      "npm": "dsh-engramory",
+      "stars": 154,
+      "install": "dsh-engramory",
+      "added": "2026-08-16"
+    },
+    {
+      "name": "forkprobe",
+      "owner": "Jayden-X-L",
+      "url": "https://github.com/Jayden-X-L/forkprobe",
+      "page": "https://awesome-dsh-plugin.com/p/Jayden-X-L/forkprobe/",
+      "category": "dev",
+      "description": {
+        "en": "Compare multiple skills on the same task and pick the winner.",
+        "zh": "同一任务并行试跑多个技能，对比结果选出最优。"
+      },
+      "npm": null,
+      "stars": 66,
+      "install": "github:Jayden-X-L/forkprobe",
+      "added": "2026-08-14"
+    },
+    {
+      "name": "dsh-TUI",
+      "owner": "ccch1mneyyy",
+      "url": "https://github.com/ccch1mneyyy/dsh-TUI",
+      "page": "https://awesome-dsh-plugin.com/p/ccch1mneyyy/dsh-TUI/",
+      "category": "ui",
+      "description": {
+        "en": "Claude Code-style full-screen terminal UI: pixel-whale header, live status line, and streaming thought expansion.",
+        "zh": "Claude Code 风格全屏终端 UI：像素鲸鱼顶栏、实时工作状态行、思考流式展开。"
+      },
+      "npm": "@deepseek-harness-tui/dsh-tui",
+      "stars": 1519,
+      "install": "@deepseek-harness-tui/dsh-tui",
+      "added": "2026-08-14"
+    },
+    {
+      "name": "dsh-vision-router",
+      "owner": "ysr666",
+      "url": "https://github.com/ysr666/dsh-vision-router",
+      "page": "https://awesome-dsh-plugin.com/p/ysr666/dsh-vision-router/",
+      "category": "vision",
+      "description": {
+        "en": "Free vision for text-only agents: built-in keyless vision chain plus pixel tools (Q&A, grounding, crop, pixel diff, colors, OCR, SVG trace, cutout, screenshots); paste an image to use it.",
+        "zh": "为纯文本 Agent 提供视觉能力：内置免 Key 视觉链 + 像素级视觉工具（看图问答、定位、裁剪、像素对比、取色、OCR、矢量化、抠图、截图）；粘贴图片即可用。"
+      },
+      "npm": "dsh-vision-router",
+      "stars": 414,
+      "install": "dsh-vision-router",
+      "added": "2026-08-14"
+    },
+    {
+      "name": "dsh-dream-skin",
+      "owner": "RevolutionLA",
+      "url": "https://github.com/RevolutionLA/dsh-dream-skin",
+      "page": "https://awesome-dsh-plugin.com/p/RevolutionLA/dsh-dream-skin/",
+      "category": "theme",
+      "description": {
+        "en": "One-command skin plugin: 8 original themes, translucent wallpaper with opacity/blur, per-user accent, and shareable theme-pack import/export, favorites and surprise-me — purely native on DSH's token system.",
+        "zh": "一键换肤插件：8 套原创主题、背景壁纸（透明度/模糊）、强调色、主题包导入/导出+分享链接、收藏与随机，纯原生 token 系统接入。"
+      },
+      "npm": "dsh-dream-skin",
+      "stars": 31,
+      "install": "dsh-dream-skin",
+      "added": "2026-08-15"
+    },
+    {
+      "name": "MisakaNet",
+      "owner": "Ikalus1988",
+      "url": "https://github.com/Ikalus1988/MisakaNet",
+      "page": "https://awesome-dsh-plugin.com/p/Ikalus1988/MisakaNet/",
+      "category": "skill",
+      "description": {
+        "en": "Failure-recovery memory: search and record failure-recovery lessons from real engineering sessions, with BM25 + semantic RAG retrieval and a lessons knowledge base.",
+        "zh": "失败恢复记忆库：从真实工程会话中搜索和记录失败恢复教训，支持 BM25 + 语义 RAG 检索和知识库管理。"
+      },
+      "npm": null,
+      "stars": 391,
+      "install": "github:Ikalus1988/MisakaNet",
+      "added": "2026-08-15"
+    },
+    {
+      "name": "dsh-webui-market-plugin",
+      "owner": "Sanqi-normal",
+      "url": "https://github.com/Sanqi-normal/dsh-webui-market-plugin",
+      "page": "https://awesome-dsh-plugin.com/p/Sanqi-normal/dsh-webui-market-plugin/",
+      "category": "market",
+      "description": {
+        "en": "In-harness plugin market for the dsh web GUI: browse the awesome-dsh-plugin.com catalog and install/uninstall plugins into a profile from Settings → Plugins → Plugin Market.",
+        "zh": "dsh Web GUI 内的社区插件市场：浏览 awesome-dsh-plugin.com 目录，从 设置 → 插件 → 插件市场 安装/卸载插件到 profile。"
+      },
+      "npm": "@sanqi-normal/dsh-webui-market-plugin",
+      "stars": 64,
+      "install": "@sanqi-normal/dsh-webui-market-plugin",
+      "added": "2026-08-14"
+    },
+    {
+      "name": "dsh-pet#dsh-pet",
+      "owner": "PC2005-cloud",
+      "url": "https://github.com/PC2005-cloud/dsh-pet/tree/main/dsh-pet",
+      "page": "https://awesome-dsh-plugin.com/p/PC2005-cloud/dsh-pet--dsh-pet/",
+      "category": "fun",
+      "description": {
+        "en": "Desktop pet for the DSH Web UI with 25 transparent animations, screen wandering, click reactions and drag, plus a reproducible asset-generation pipeline.",
+        "zh": "DSH Web UI 桌面宠物：25 个透明动画、屏幕漫游、点击反应与拖拽，附可复现的素材生成链。"
+      },
+      "npm": "dsh-pet",
+      "stars": 56,
+      "install": "dsh-pet",
+      "added": "2026-08-14",
+      "screenshots": [
+        "https://raw.githubusercontent.com/PC2005-cloud/dsh-pet/main/assets/screenshots/dsh-pet-running-1.png",
+        "https://raw.githubusercontent.com/PC2005-cloud/dsh-pet/main/assets/screenshots/dsh-pet-running-2.png"
+      ]
+    },
+    {
+      "name": "notes",
+      "owner": "zhaoolee",
+      "url": "https://github.com/zhaoolee/notes",
+      "page": "https://awesome-dsh-plugin.com/p/zhaoolee/notes/",
+      "category": "tools",
+      "description": {
+        "en": "Export DSH conversations as Smartisan Notes-style PNGs, or create and update Markdown notes in a configured account-scoped workspace.",
+        "zh": "将 DSH 对话导出为锤子便签风格 PNG，或在配置的账号工作区中新建和更新 Markdown 便签。"
+      },
+      "npm": null,
+      "stars": 142,
+      "install": "github:zhaoolee/notes",
+      "added": "2026-08-14"
+    },
+    {
+      "name": "mstar-harness",
+      "owner": "btspoony",
+      "url": "https://github.com/btspoony/mstar-harness",
+      "page": "https://awesome-dsh-plugin.com/p/btspoony/mstar-harness/",
+      "category": "workflow",
+      "description": {
+        "en": "Skill-driven harness/loop engineering workflow agent plugin.",
+        "zh": "技能驱动的 harness/loop 工程化工作流插件。"
+      },
+      "npm": null,
+      "stars": 46,
+      "install": "github:btspoony/mstar-harness",
+      "added": "2026-08-14"
+    },
+    {
+      "name": "dsh-suite#plugin-session-export",
+      "owner": "whyihaveyou",
+      "url": "https://github.com/whyihaveyou/dsh-suite/tree/main/packages/plugins/plugin-session-export",
+      "page": "https://awesome-dsh-plugin.com/p/whyihaveyou/dsh-suite--packages-plugins-plugin-session-export/",
+      "category": "session",
+      "description": {
+        "en": "Export the append-only session log as human-readable Markdown or HTML, grouped by trajectory source.",
+        "zh": "把 append-only 会话日志导出为按轨迹来源分组的可读 Markdown 或 HTML。"
+      },
+      "npm": null,
+      "stars": 38,
+      "install": "github:whyihaveyou/dsh-suite#path:/packages/plugins/plugin-session-export",
+      "added": "2026-08-14"
+    },
+    {
+      "name": "dsh-suite#plugin-notify",
+      "owner": "whyihaveyou",
+      "url": "https://github.com/whyihaveyou/dsh-suite/tree/main/packages/plugins/plugin-notify",
+      "page": "https://awesome-dsh-plugin.com/p/whyihaveyou/dsh-suite--packages-plugins-plugin-notify/",
+      "category": "notify",
+      "description": {
+        "en": "IM webhook and local notifications on turn completion, errors, or approval (Feishu/WeCom/DingTalk/Slack/Discord/custom).",
+        "zh": "回合完成、错误或待审批时推送 IM webhook（飞书/企微/钉钉/Slack/Discord/自定义）与本地通知。"
+      },
+      "npm": null,
+      "stars": 38,
+      "install": "github:whyihaveyou/dsh-suite#path:/packages/plugins/plugin-notify",
+      "added": "2026-08-14"
+    },
+    {
+      "name": "deepseek-harness-wallet",
+      "owner": "feibi-mochi",
+      "url": "https://github.com/feibi-mochi/deepseek-harness-wallet",
+      "page": "https://awesome-dsh-plugin.com/p/feibi-mochi/deepseek-harness-wallet/",
+      "category": "usage",
+      "description": {
+        "en": "Multi-provider wallet chip: official DeepSeek balance, per-session cost & tokens, third-party token totals, recharge shortcut, low-balance alerts.",
+        "zh": "多供应商钱包标签：官方 DeepSeek 余额、本会话花费与 token、第三方合计 token、一键充值、低余额提醒。"
+      },
+      "npm": "deepseek-harness-wallet",
+      "stars": 21,
+      "install": "deepseek-harness-wallet",
+      "added": "2026-08-14"
+    },
+    {
+      "name": "dsh-codex-oauth",
+      "owner": "WNJXYK",
+      "url": "https://github.com/WNJXYK/dsh-codex-oauth",
+      "page": "https://awesome-dsh-plugin.com/p/WNJXYK/dsh-codex-oauth/",
+      "category": "model",
+      "description": {
+        "en": "Use a ChatGPT/Codex subscription in DeepSeek Harness with GPT models, image generation, web search, subscription quota reporting, model and feature controls, and browser or device-code OAuth sign-in.",
+        "zh": "在 DeepSeek Harness 中使用 ChatGPT/Codex 订阅接入 GPT 模型、图像生成与 Web 搜索，并支持订阅额度显示、模型与功能控制，以及浏览器或设备码 OAuth 登录。"
+      },
+      "npm": "@wnjxyk/dsh-codex-oauth",
+      "stars": 8,
+      "install": "@wnjxyk/dsh-codex-oauth",
+      "added": "2026-08-16"
+    },
+    {
+      "name": "dsh-context",
+      "owner": "bowenliang123",
+      "url": "https://github.com/bowenliang123/dsh-context",
+      "page": "https://awesome-dsh-plugin.com/p/bowenliang123/dsh-context/",
+      "category": "memory",
+      "description": {
+        "en": "Context insight panel: see what the model's context window is made of and how it evolves — composition vs. window size, per-request history, compression/injection events, and per-message token stats.",
+        "zh": "上下文洞察面板：一眼看清模型上下文窗口的组成与变化——构成对照窗口大小、按请求历史趋势、压缩/注入事件、消息级 token 统计。"
+      },
+      "npm": "dsh-context",
+      "stars": 107,
+      "install": "dsh-context",
+      "added": "2026-08-14"
+    },
+    {
+      "name": "plugin-registry",
+      "owner": "vlln",
+      "url": "https://github.com/vlln/plugin-registry",
+      "page": "https://awesome-dsh-plugin.com/p/vlln/plugin-registry/",
+      "category": "dev",
+      "description": {
+        "en": "Ecosystem infrastructure: a thin browser console for managing official repository plugins (zero patches) plus a make-dsh-plugin skill for guided plugin development.",
+        "zh": "插件生态基建：浏览器面板管理官方 repository 插件（0 patch）+ make-dsh-plugin 插件开发引导技能。"
+      },
+      "npm": null,
+      "stars": 50,
+      "install": "github:vlln/plugin-registry",
+      "added": "2026-08-14"
+    },
+    {
+      "name": "dsh-at-file",
+      "owner": "omdsh-dev",
+      "url": "https://github.com/omdsh-dev/dsh-at-file",
+      "page": "https://awesome-dsh-plugin.com/p/omdsh-dev/dsh-at-file/",
+      "category": "ui",
+      "description": {
+        "en": "Codex-style `@file` mentions: search workspace files in the composer and attach their contents to prompts.",
+        "zh": "Codex 风格的 `@file` 文件引用，输入框里直接搜索并引用工作区文件。"
+      },
+      "npm": null,
+      "stars": 262,
+      "install": "github:omdsh-dev/dsh-at-file",
+      "added": "2026-08-13"
+    },
+    {
+      "name": "dsh-vision",
+      "owner": "linenxi-ctrl",
+      "url": "https://github.com/linenxi-ctrl/dsh-vision",
+      "page": "https://awesome-dsh-plugin.com/p/linenxi-ctrl/dsh-vision/",
+      "category": "vision",
+      "description": {
+        "en": "External vision plugin for DeepSeek Harness: whale-button config panel, image recognition with auto-reply, and agent screenshot/recognize tools.",
+        "zh": "外挂识图插件：鲸鱼按钮配置面板、图片识图自动回传、模型自主截图识图工具。"
+      },
+      "npm": null,
+      "stars": 11,
+      "install": "github:linenxi-ctrl/dsh-vision",
+      "added": "2026-08-14"
+    },
+    {
+      "name": "dsh-skin",
+      "owner": "KinGao294",
+      "url": "https://github.com/KinGao294/dsh-skin",
+      "page": "https://awesome-dsh-plugin.com/p/KinGao294/dsh-skin/",
+      "category": "theme",
+      "description": {
+        "en": "Codex-style skin switcher plus a custom wallpaper layer with opacity and blur controls.",
+        "zh": "Codex 风格皮肤切换器 + 自定义壁纸层，可调透明度与模糊。"
+      },
+      "npm": null,
+      "stars": 16,
+      "install": "github:KinGao294/dsh-skin",
+      "added": "2026-08-14"
+    },
+    {
+      "name": "humanizer-ru#dsh",
+      "owner": "Vladimir-Human",
+      "url": "https://github.com/Vladimir-Human/humanizer-ru/tree/main/dsh",
+      "page": "https://awesome-dsh-plugin.com/p/Vladimir-Human/humanizer-ru--dsh/",
+      "category": "skill",
+      "description": {
+        "en": "Cleans AI traces from Russian text: finds chatbot copy-paste artefacts (ChatGPT, Gemini, Grok, Perplexity, DeepSeek) and rewrites the text into natural prose on request; 39 regex markers with an evidence registry, offline, text-only bundle.",
+        "zh": "清理俄语文本中的 AI 痕迹：识别聊天机器人复制粘贴残留（ChatGPT、Gemini、Grok、Perplexity、DeepSeek），并按需改写为自然行文；39 个正则标记配证据登记表，离线运行，纯文本 bundle。"
+      },
+      "npm": null,
+      "stars": 100,
+      "install": "github:Vladimir-Human/humanizer-ru#path:/dsh",
+      "added": "2026-08-16"
+    },
+    {
+      "name": "dsh-suite#plugin-manager",
+      "owner": "whyihaveyou",
+      "url": "https://github.com/whyihaveyou/dsh-suite/tree/main/packages/plugins/plugin-manager",
+      "page": "https://awesome-dsh-plugin.com/p/whyihaveyou/dsh-suite--packages-plugins-plugin-manager/",
+      "category": "market",
+      "description": {
+        "en": "In-app plugin store for the DSH Web UI: browse, search, one-click install, compat badges.",
+        "zh": "DSH Web UI 内置插件商店：浏览、搜索、一键安装、兼容性徽章。"
+      },
+      "npm": "@dsh-suite/plugin-manager",
+      "stars": 38,
+      "install": "@dsh-suite/plugin-manager",
+      "added": "2026-08-14"
+    },
+    {
+      "name": "dsh-stock-watch",
+      "owner": "Awu12277",
+      "url": "https://github.com/Awu12277/dsh-stock-watch",
+      "page": "https://awesome-dsh-plugin.com/p/Awu12277/dsh-stock-watch/",
+      "category": "fun",
+      "description": {
+        "en": "A-share watchlist real-time market monitoring plugin: a collapsible popup in the top-right corner of the DeepSeek Harness (DSH) web interface for real-time quote monitoring, group switching, intraday and candlestick (K-line) charts, and buy/sell target price settings.",
+        "zh": "A 股自选股实时行情盯盘插件：在 DeepSeek Harness（DSH）Web 界面的右上角显示一个可折叠弹窗，实时监控自选股行情、切换分组、查看分时与 K 线、设置买卖目标价。"
+      },
+      "npm": null,
+      "stars": 29,
+      "install": "github:Awu12277/dsh-stock-watch",
+      "added": "2026-08-15",
+      "screenshots": [
+        "https://raw.githubusercontent.com/Awu12277/dsh-stock-watch/main/screenshots/detail-kline-dark.png",
+        "https://raw.githubusercontent.com/Awu12277/dsh-stock-watch/main/screenshots/detail-minute-dark.png",
+        "https://raw.githubusercontent.com/Awu12277/dsh-stock-watch/main/screenshots/list-dark.png"
+      ]
+    }
+  ]
+}
