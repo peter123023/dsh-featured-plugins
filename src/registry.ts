@@ -172,3 +172,40 @@ export function installTargetFor(plugin: RegistryPlugin): string | undefined {
   if (plugin.npm !== undefined && plugin.npm !== null && plugin.npm.trim().length > 0) return plugin.npm
   return undefined
 }
+
+/** Extract a normalized `owner/repo` from a `github:owner/repo[#…]` target, or null. */
+function gitRepoTarget(spec: string): string | null {
+  const match = /^github:([^#]+?)(?:#.*)?$/i.exec(spec.trim())
+  if (match === null) return null
+  return match[1]!.replace(/\/+$/, '').toLowerCase()
+}
+
+/**
+ * Resolve an installed package back to its catalog entry, so the market can
+ * report and enforce category membership (e.g. which category an installed
+ * theme belongs to). Matches by display name, npm name, and GitHub `owner/repo`
+ * target — the inverse of {@link findPlugin}.
+ * @param registry - the catalog.
+ * @param packageName - the installed package name.
+ * @param spec - the installed spec (e.g. `github:owner/repo`).
+ * @returns the matching catalog entry, or `undefined`.
+ */
+export function registryEntryForPackage(
+  registry: Registry,
+  packageName: string,
+  spec: string,
+): RegistryPlugin | undefined {
+  const target = packageName.toLowerCase()
+  for (const plugin of registry.plugins) {
+    if (plugin.name.toLowerCase() === target) return plugin
+    if (plugin.npm != null && plugin.npm.toLowerCase() === target) return plugin
+  }
+  // GitHub-derived package names (e.g. `treg-dsh`) match on owner/repo.
+  const gitTarget = gitRepoTarget(spec)
+  if (gitTarget !== null) {
+    for (const plugin of registry.plugins) {
+      if (gitRepoTarget(plugin.install ?? '') === gitTarget) return plugin
+    }
+  }
+  return undefined
+}

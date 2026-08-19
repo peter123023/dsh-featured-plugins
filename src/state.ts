@@ -68,3 +68,27 @@ export function setDisabled(profileDirectory: string, name: string, disabled: bo
   writeDisabled(profileDirectory, set)
   return set
 }
+
+/**
+ * Atomically make `active` the single enabled member of an exclusive group:
+ * every other member of `group` is added to the disabled set, `active` is
+ * removed from it, and the result is persisted. This is the persistence-layer
+ * half of mutual exclusion (the live/hot-toggle half lives in {@link hot.ts});
+ * on the next boot only `active` comes up.
+ * @param profileDirectory - the profile's state directory root.
+ * @param group - the full set of package names in the exclusive category.
+ * @param active - the package name to keep enabled.
+ * @returns the package names that were switched off by this activation.
+ */
+export function activateExclusive(profileDirectory: string, group: string[], active: string): string[] {
+  const disabled = readDisabled(profileDirectory)
+  const switchedOff: string[] = []
+  for (const name of group) {
+    if (name === active) continue
+    if (!disabled.has(name)) switchedOff.push(name)
+    disabled.add(name)
+  }
+  disabled.delete(active)
+  writeDisabled(profileDirectory, disabled)
+  return switchedOff
+}

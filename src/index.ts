@@ -12,7 +12,7 @@ import { mountMarketRoutes, type MarketConfig, type MarketHost } from './routes.
 export const name = 'dsh-featured-plugins'
 
 /** Optional cordis config; profile defaults to the `--profile` arg or `web`. */
-export type Config = Partial<Pick<MarketConfig, 'profile' | 'allowRestart'>>
+export type Config = Partial<Pick<MarketConfig, 'profile' | 'allowRestart' | 'exclusiveCategories'>>
 
 /** Structural subset of a desktop host's public `desktopProfiles` contract. */
 interface DesktopProfilesLike {
@@ -52,6 +52,7 @@ export function apply(ctx: Context, config?: Config): void {
         profile: config?.profile ?? argvProfile() ?? 'web',
         allowRestart: config?.allowRestart ?? true,
       }
+      if (config?.exclusiveCategories !== undefined) resolved.exclusiveCategories = config.exclusiveCategories
       host.effect(() => mountMarketRoutes(host, resolved), 'dsh-featured-plugins: http routes')
       return
     }
@@ -68,7 +69,11 @@ export default apply
 
 // Re-export the public library surface for process-level consumers.
 export type * from './types.ts'
-export { argvProfile, DEFAULT_PROFILE } from './config.ts'
+export { argvProfile, DEFAULT_PROFILE, DEFAULT_EXCLUSIVE_CATEGORIES } from './config.ts'
+export { tryHotToggle, type HotToggleResult } from './hot.ts'
+export { activateExclusive } from './state.ts'
+export { aboutInfo, type AboutInfo } from './about.ts'
+export { appendLog, readLogs, type MarketLogEntry, type MarketLogLevel, type MarketLogOp } from './logs.ts'
 export { loadRegistry, loadSnapshot, isValidRegistry, findPlugin, installTargetFor } from './registry.ts'
 export { verifyActivation, verifyProfile, type ActivationResult, type ActivationState } from './verify.ts'
 export { profileDir, readInstalled, readProfileBundles, readInstalledVersion, hasDshManifest, hasLoadableEntry } from './profile.ts'

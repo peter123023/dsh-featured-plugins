@@ -16,6 +16,14 @@ export const DEFAULT_REGISTRY_URL = 'https://awesome-dsh-plugin.com/plugins.json
 export const DEFAULT_CACHE_TTL_MS = 30 * 60 * 1000
 
 /**
+ * Categories whose plugins are mutually exclusive: within one such category,
+ * only a single plugin may be enabled at a time (e.g. themes). Enabling one
+ * automatically disables the rest of the group. Operators can override this
+ * via `MarketConfig.exclusiveCategories`.
+ */
+export const DEFAULT_EXCLUSIVE_CATEGORIES = ['theme']
+
+/**
  * Read the active profile from `--profile <name>` on the current process
  * argv, falling back to {@link DEFAULT_PROFILE} when absent.
  */
