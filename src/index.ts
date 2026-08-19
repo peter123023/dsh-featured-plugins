@@ -8,16 +8,16 @@
 
 import type { Context } from '@deepseek-ai/cordis'
 import { mountMarketRoutes, type MarketConfig, type MarketHost } from './routes.ts'
+import {
+  desktopRuntimeFor,
+  type DesktopPnpmLike,
+  type DesktopProfilesLike,
+} from './desktop.ts'
 
 export const name = 'dsh-featured-plugins'
 
 /** Optional cordis config; profile defaults to the `--profile` arg or `web`. */
 export type Config = Partial<Pick<MarketConfig, 'profile' | 'allowRestart' | 'exclusiveCategories'>>
-
-/** Structural subset of a desktop host's public `desktopProfiles` contract. */
-interface DesktopProfilesLike {
-  readonly current: { readonly name: string; readonly dir: string }
-}
 
 interface MarketEffectHost extends MarketHost {
   effect(callback: () => (() => void | Promise<void>), label: string): void
@@ -57,11 +57,29 @@ export function apply(ctx: Context, config?: Config): void {
       return
     }
 
-    // Desktop path: the shell owns the profile location and a packaged pnpm.
-    // TODO(phase-3): inject `desktopPnpm` and adapt via a desktop runtime,
-    // mirroring the host's cross-environment contract. For now the market
-    // simply does not mount under a desktop host without that service.
-    void desktopProfiles
+    // Desktop path: the shell owns the profile directory and a packaged
+    // pnpm, so installs must route through Desktop's package manager rather
+    // than a CLI spawn. The shell also owns relaunch, so restart is disabled.
+    const desktopProfilesNonNull = desktopProfiles
+    hostCtx.inject(['desktopPnpm'], (desktopCtx: Context) => {
+      const current = desktopProfilesNonNull.current
+      const pnpm = (desktopCtx as unknown as { desktopPnpm: DesktopPnpmLike }).desktopPnpm
+      const runtime = desktopRuntimeFor(pnpm, current.dir)
+      const resolved: MarketConfig = {
+        profile: current.name,
+        profileDirectory: current.dir,
+        allowRestart: false,
+      }
+      if (config?.exclusiveCategories !== undefined) resolved.exclusiveCategories = config.exclusiveCategories
+      const desktopHost = desktopCtx as unknown as MarketEffectHost
+      desktopHost.effect(() => {
+        const disposeRoutes = mountMarketRoutes(desktopHost, resolved, runtime)
+        return async () => {
+          disposeRoutes()
+          await runtime.dispose()
+        }
+      }, 'dsh-featured-plugins: desktop http routes')
+    })
   })
 }
 
